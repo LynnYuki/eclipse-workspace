@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +20,7 @@ public class Usercontroller {
 		user.setAge(18);
 		user.setBirthday(new java.util.Date());
 		user.setPassword("123456");
+		user.setDesc("hello~~~~~~~~~");
 		return user;
 	}
 	

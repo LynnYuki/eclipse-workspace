@@ -2,11 +2,19 @@ package com.example.pojo;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 public class User {
+	@JsonIgnore
 	private String password;
 	private String name;
 	private Integer age;
+	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a",locale="zh",timezone="GMT+8")
 	private Date birthday;
+	@JsonInclude(Include.NON_NULL)
 	private String desc;
 	public String getPassword() {
 		return password;
